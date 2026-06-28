@@ -16,11 +16,9 @@
                   <div class="browser-url">${c(t.domain)}</div>
                 </div>
                 <div class="browser-preview">
-                  <iframe src="${h(t.url)}" title="${h(t.name)} website preview" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
-                  <div class="iframe-fallback">
-                    <strong>${c(t.name)}</strong>
-                    <span>Live site preview</span>
-                  </div>
+                  <a href="${h(t.url)}" target="_blank" rel="noreferrer" style="display:block;width:100%;height:100%;">
+                    <img src="https://api.microlink.io/?url=${encodeURIComponent(t.url)}&screenshot=true&meta=false&embed=screenshot.url" alt="${h(t.name)} website preview" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;border:none;" />
+                  </a>
                 </div>
               </div>
               <div class="portfolio-meta">
